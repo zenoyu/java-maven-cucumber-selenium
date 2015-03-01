@@ -13,7 +13,7 @@ http://chromedriver.storage.googleapis.com/index.html
 
 
 - IE Internet Explorer (Windows):
-https://code.google.com/p/selenium/downloads/list
+http://selenium-release.storage.googleapis.com/index.html
 
 
 
@@ -26,7 +26,7 @@ pom.xml dependency changes in
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>2.44.0</version>
+    <version>2.45.0</version>
 </dependency>
 
 

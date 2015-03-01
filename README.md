@@ -11,7 +11,9 @@ This repo can be run on local Windows / Mac / Linux Platform, as long as you hav
 = Setup
 ========================
 
+
 = Install on Local Machine =
+
 Install Java & Maven on your local machine
 
 = To Run (Maven command line) =
@@ -19,21 +21,21 @@ Install Java & Maven on your local machine
 Local machine with browser name (ie / chrome / firefox)
 
 - Test with Google Chrome (Mac / Windows for machineType):
-mvn test -DsiteUrl=http://www.google.com -DbrowserName="googlechrome" -DmachineType="mac"
+> mvn test -DsiteUrl=http://www.google.com -DbrowserName="googlechrome" -DmachineType="mac"
 
 - Test with Firefox (Mac / Windows for machineType):
-mvn test -DsiteUrl=http://www.google.com -DbrowserName="firefox" -DmachineType="mac"
+> mvn test -DsiteUrl=http://www.google.com -DbrowserName="firefox" -DmachineType="mac"
 
 - Test with IE (Windows Only):
-mvn test -DsiteUrl=http://www.google.com -DbrowserName="ie"
+> mvn test -DsiteUrl=http://www.google.com -DbrowserName="ie"
 
-Remote Webdriver,
+Remote Webdriver:
 
 - Testingbot (You can pass through Bamboo build variable for api key)
-mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<testingbot api key>@hub.testingbot.com:4444/wd/hub"
+> mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<testingbot api key>@hub.testingbot.com:4444/wd/hub"
 
 - SauceLabs (You can pass through Bamboo build variable for api key)
-mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<saucelabs api key>@ondemand.saucelabs.com:80/wd/hub"
+> mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<saucelabs api key>@ondemand.saucelabs.com:80/wd/hub"
 
 = WebDriver Update =
 See README inside /drivers folder

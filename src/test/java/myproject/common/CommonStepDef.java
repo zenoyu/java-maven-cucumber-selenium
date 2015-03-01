@@ -82,7 +82,7 @@ public class CommonStepDef extends BaseScenario {
 
     // Wait for Google search field to appear
     WebDriverWait wait = new WebDriverWait(driver, 200);
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".gbqfif")));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
   }
 
 }
