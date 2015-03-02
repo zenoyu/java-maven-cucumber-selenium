@@ -36,6 +36,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -70,8 +71,7 @@ public class BaseScenario {
       if (browserName.equalsIgnoreCase("googlechrome")) { 
 
         /* Chrome Local */
-        if (machineType.equalsIgnoreCase("mac"))
-        {
+        if (machineType.equalsIgnoreCase("mac")) {
           System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
         }
         else {
@@ -88,6 +88,10 @@ public class BaseScenario {
         ieCapabilities.setCapability("ignoreZoomSetting", true);
         driver = new InternetExplorerDriver(ieCapabilities);
 
+      } else if (browserName.equalsIgnoreCase("safari")) {
+
+        /* Safari Driver */
+        driver = new SafariDriver();
       } else if (browserName.equalsIgnoreCase("firefox")) {
 
         /* Firefox */

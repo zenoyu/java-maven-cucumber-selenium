@@ -18,7 +18,7 @@ Install Java & Maven on your local machine
 
 = To Run (Maven command line) =
 
-Local machine with browser name (ie / chrome / firefox)
+Local machine with browser name (ie / chrome / firefox / safari)
 
 - Test with Google Chrome (Mac / Windows for machineType):
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="googlechrome" -DmachineType="mac"
@@ -28,6 +28,9 @@ Local machine with browser name (ie / chrome / firefox)
 
 - Test with IE (Windows Only):
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="ie"
+
+- Test with Safari (After install Safari extension, see /drivers/README.md):
+> mvn test -DsiteUrl=http://www.google.com -DbrowserName="safari"
 
 Remote Webdriver:
 

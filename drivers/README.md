@@ -16,6 +16,12 @@ http://chromedriver.storage.googleapis.com/index.html
 http://selenium-release.storage.googleapis.com/index.html
 
 
+- Safari need to install extensions into your Safari browser to allow connection
+Download: SafariDriver.safariextz from latest version from:
+http://selenium-release.storage.googleapis.com/index.html
+
+Double click the safari extension to install into your Safari browser
+
 
 - FireFox Driver (Windows / Mac):
 As FireFox driver is default setting in selenium (other than htmlunit), it is required to update the selenium version to latest version from: 
