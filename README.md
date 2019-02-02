@@ -1,5 +1,5 @@
-BDD: Java Maven Cucumber Selenium Setup
-==================================
+# BDD: Java Maven Cucumber Selenium Setup
+
 
 Java + Junit + Cucumber + Selenium testing cases
 
@@ -7,12 +7,9 @@ This repo contains the Maven setup for Cucumber / Selenium, with Searching Googl
 
 This repo can be run on local Windows / Mac / Linux Platform, as long as you have Java/Maven setup correctly.
 
-========================
-= Setup
-========================
+## Setup
 
-
-= Install on Local Machine =
+### Install on Local Machine
 
 Install Java & Maven on your local machine
 
@@ -21,52 +18,59 @@ Install Java & Maven on your local machine
 Local machine with browser name (ie / chrome / firefox / safari)
 
 - Test with Google Chrome (Mac / Windows for machineType):
+```
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="googlechrome" -DmachineType="mac"
+```
 
 - Test with Firefox (Mac / Windows for machineType):
+```
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="firefox" -DmachineType="mac"
+```
 
 - Test with IE (Windows Only):
+```
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="ie"
+```
 
 - Test with Safari (After install Safari extension, see /drivers/README.md):
+```
 > mvn test -DsiteUrl=http://www.google.com -DbrowserName="safari"
+```
 
 Remote Webdriver:
 
 - Testingbot (You can pass through Bamboo build variable for api key)
+```
 > mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<testingbot api key>@hub.testingbot.com:4444/wd/hub"
+```
 
 - SauceLabs (You can pass through Bamboo build variable for api key)
+```
 > mvn test -DsiteUrl=http://www.google.com -DenvName="remote" -DremoteWebDriver="http://<saucelabs api key>@ondemand.saucelabs.com:80/wd/hub"
+```
 
-= WebDriver Update =
+# WebDriver Update
 See README inside /drivers folder
 
-========================
-= Before we start
-========================
 
-= Feature file: Gherkin Syntax =
+# Before we start
+
+## Feature file: Gherkin Syntax
 Gherkin is the language that Cucumber understands. You can find more Gherin Syntax here:
 https://github.com/cucumber/cucumber/wiki/Gherkin
 
-= Selenium Syntax =
+## Selenium Syntax
 Selenium is an automated web browser testing. You can find some commonly used Selenium commands here:
 http://www.seleniumhq.org/docs/02_selenium_ide.jsp#commonly-used-selenium-commands
 
 
-========================
-= Configure your project siteUrl
-========================
+# Configure your project siteUrl
 
 You can update the siteUrl in the pom.xml property (default is http://www.google.com for my example) for your application need, also you can pass in from command line
 
-========================
-= Your first BDD Test Case
-========================
+# Your first BDD Test Case
 
-= Your first feature file =
+## Your first feature file
 Create a feature file under src\test\resources\myproject (You can group your feature in same directory, i.e. homepage / contact / products etc)
 
 1. Copy your story / feature description (ideally same as from Jira description, As a site user, I want to ...., So that ...)
@@ -83,9 +87,8 @@ The Data Table (even only 1 row) can help you to change the data input in the fu
 
 Copy printed function signatures from last step, and implement the selenium action you want to achieve.
 
-========================
-= Bamboo Plan Setup
-========================
+
+# Bamboo Plan Setup
 To create a continuous testing plan, please follow the below steps:
 
 1. Create Bamboo Plan
