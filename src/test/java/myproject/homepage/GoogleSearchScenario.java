@@ -42,33 +42,8 @@ import cucumber.api.java.en.When;
 import static org.junit.Assert.assertTrue;
 
 public class GoogleSearchScenario extends BaseScenario {
-
-  @When("^I search \"(.*?)\"$")
-  public void i_search(String keyword) throws Throwable {
   
-    // Find the text input element by its name
-    WebElement element = driver.findElement(By.name("q"));
-
-    // Enter something to search for keyword (From your feature file)
-    element.sendKeys(keyword);
-
-    // Now submit the form. WebDriver will find the form for us from the element
-    element.submit();
-
-    // Wait for 1 sec
-    Thread.sleep(secondsToWait);
-
-  }
-
-  @Then("^The page title should contains \"(.*?)\"$")
-  public void the_page_title_should_contains(String keyword) throws Throwable {
-
-    //System.out.println("Page title is: " + driver.getTitle());
-    assertTrue(driver.getTitle().contains(keyword));
-
-    // close browser cookie / session
-    closeDriver();
-  }
+  // You can add custom action code for specific page
 
 
 }
